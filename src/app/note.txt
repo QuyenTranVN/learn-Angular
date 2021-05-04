@@ -1,0 +1,21 @@
+Directives: chỉ thị
+
+Component Directives: Thành Phần
+These form the main class having details of how the component should be processed, instantiated and used at runtime. 
+
+Structural Directives: Cấu trúc
+A structure Directives basically deals with manipulating the dom elements. Structural Directives have a * sign before the directive. 
+For example: *ngIf , *ngFor. 
+
+Attribute Directives: Thuộc tính
+Attribute directive deal with changing the look and behavior of the dom element. You can create your own directives as explained in the below section.
+
+
+* Fetch 
+- Json server: API Server (fake) / mock API
+- CRUD
+    - Create: Tao moi -> POST
+    - Read: Lay du lieu -> GET
+    - Update: Chinh sua -> PUT/ PATCH
+    - Delete: Xoa -> DELETE
+- Postman

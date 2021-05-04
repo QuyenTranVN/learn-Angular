@@ -1,0 +1,29 @@
+<p>welcome to my Channel</p>
+
+<!-- <span *ngIf="age < 18; then condition1; else condition2"></span> -->
+<br />
+<br />
+
+<!-- <ng-template #condition1 class="underage">bạn dưới 18 tuổi</ng-template>
+<ng-template #condition2 class="overage">bạn trên 18 tuổi</ng-template> -->
+<!-- <span *ngIf="age < 18" class="underage">bạn dưới 18 tuổi</span>
+<br />
+<br />
+<span *ngIf="age >= 18" class="overage">bạn trên 18 tuổi</span> -->
+<h3 class="overage">bạn tên là {{ name }}</h3>
+<h3 class="overage">bạn đã là {{ age }} tuổi</h3>
+<br />
+<br />
+<!-- <button (click)="increase()">increase</button>
+<br />
+<p>comments: <br /></p>
+<span>{{ comments | json }}</span>
+<br />
+<p>comments[0]</p>
+<span>{{ comments[0] | json }}</span> -->
+<p>posts: <br /></p>
+<div *ngFor="let post of posts">
+  <li>{{ post | json }}</li>
+</div>
+<br />
+<!-- <button (click)="addPost()">add Post</button> -->

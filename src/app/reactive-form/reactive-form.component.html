@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Reactive Form</h1>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input type="text" formControlName="name" required />
+      <span *ngIf="profileForm.controls.name.invalid" class="errorMessage"
+        >* required valid information</span
+      >
+    </label>
+    <br />
+    <label>
+      Age:
+      <input type="text" formControlName="age" required />
+      <span *ngIf="profileForm.controls.age.invalid" class="errorMessage"
+        >* required valid information</span
+      >
+    </label>
+    <br />
+    <button
+      class="btn btn-success"
+      type="submit"
+      [disabled]="!profileForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

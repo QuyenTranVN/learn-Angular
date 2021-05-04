@@ -1,0 +1,35 @@
+<h1>hello world</h1>
+<p>welcome to my Channel</p>
+<p>hello {{ name }}</p>
+<p appBold>your are {{ age }} years old</p>
+<span *ngIf="age < 18; then trueCondition; else falseCondition"></span>
+<br />
+<br />
+<ng-template #trueCondition class="underage">bạn dưới 18 tuổi</ng-template>
+
+<ng-template #falseCondition class="overage">bạn trên 18 tuổi</ng-template>
+<!-- <span *ngIf="age < 18" class="underage">bạn dưới 18 tuổi</span>
+<br />
+<br />
+<span *ngIf="age >= 18" class="overage">bạn trên 18 tuổi</span> -->
+<br />
+<br />
+<button (click)="increase()" appBold>increase</button>
+<br />
+<br />
+<br />
+<br />
+<br />
+<input [(ngModel)]="name" />
+<p>Car menu:</p>
+<br />
+<div *ngFor="let vehicle of vehicles">
+  <li>{{ vehicle }}</li>
+</div>
+
+<br />
+<div>
+  <select>
+    <option *ngFor="let vehicle of vehicles">{{ vehicle }}</option>
+  </select>
+</div>
