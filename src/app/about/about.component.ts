@@ -10,8 +10,8 @@ import { ServerHttpService } from '../Services/server-http.service';
 export class AboutComponent implements OnInit {
   name = '';
   age = '';
-  comments = [];
-  posts = [];
+  comments: any[];
+  posts: any[] = [];
   // vehicles = ['Honda', 'Toyota', 'Huyndai ', 'Ford'];
   constructor(
     private common: CommonService,

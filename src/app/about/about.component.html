@@ -1,9 +1,14 @@
 <p>welcome to my Channel</p>
+<p>
+  bạn có <span class="postCss">&nbsp; {{ posts?.length }} &nbsp;</span> tin nhắn
+</p>
 
 <!-- <span *ngIf="age < 18; then condition1; else condition2"></span> -->
 <br />
 <br />
-
+<p>
+  số tin nhắn<span class="badge">{{ posts?.length }}</span>
+</p>
 <!-- <ng-template #condition1 class="underage">bạn dưới 18 tuổi</ng-template>
 <ng-template #condition2 class="overage">bạn trên 18 tuổi</ng-template> -->
 <!-- <span *ngIf="age < 18" class="underage">bạn dưới 18 tuổi</span>
@@ -20,10 +25,25 @@
 <span>{{ comments | json }}</span>
 <br />
 <p>comments[0]</p>
-<span>{{ comments[0] | json }}</span> -->
+<span>{{ comments[0] | json }}</span>
 <p>posts: <br /></p>
 <div *ngFor="let post of posts">
   <li>{{ post | json }}</li>
-</div>
+</div> -->
 <br />
-<!-- <button (click)="addPost()">add Post</button> -->
+<button (click)="addPost()">add Post</button
+><span class="badge"> {{ posts?.length }}</span>
+<br />
+<br />
+<table>
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{ post?.id }}</td>
+    <td>{{ post?.title }}</td>
+    <td>{{ post?.author }}</td>
+  </tr>
+</table>
